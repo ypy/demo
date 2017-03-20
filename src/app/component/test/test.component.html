@@ -1,0 +1,33 @@
+<h4>绑定数据</h4>
+<p>My name is: {{name}} </p>
+<p>My age is: {{age}} </p>
+<p>My hobby is: {{hobby}} </p>
+<h4>ngFor</h4>
+<ul>
+  <li *ngFor="let hobby of hobbies;let i=index">{{i}}-{{hobby.name}}</li>
+</ul>
+<h4>ngIf</h4>
+<p *ngIf="hobbies.length > 3">hobbiesList's length is bigger than 3</p>
+<p *ngIf="hobbies.length <= 3">hobbiesList's length is not bigger than 3</p>
+
+
+<p>点击事件</p>
+<button (click)="showMsg()">show msg</button>
+<p>keyup事件,传递原生的event对象</p>
+<input (keyup)="keyupHandler1($event)"  type="text">
+您输入的值为: {{input1}}
+<p>keyup事件,传递原生的event对象,强类型</p>
+<input (keyup)="keyupHandler2($event)"  type="text">
+您输入的值为: {{input2}}
+<p>模板引用变量</p>
+<input #name3 (keyup.enter)="keyupHandler3(name3.value)"  type="text">
+您输入的值为: {{input3}}
+
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+</p>
+<ul class="the-icons">
+<span><i class="fa fa-search"></i> icon-search</span>
+</ul>
