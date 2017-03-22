@@ -1,0 +1,12 @@
+.movie-desc{    
+    display: block;
+    float: left;
+    width: 400px;
+    }
+.movie-operator i{
+padding-left: 10px;
+cursor: pointer;
+}
+.movie-item{
+    list-style-type:none
+}

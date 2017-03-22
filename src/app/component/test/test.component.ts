@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+
+import {Observable} from 'rxjs/Observable';
+
 import{Hobby} from 'app/models/Hobby';
+import{Message} from 'app/models/Message';
+import{MovieService} from 'app/services/movie.service'
 
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  styleUrls: ['./test.component.css'],
+  providers: [ MovieService ]
 })
 
 export class TestComponent implements OnInit {
@@ -12,13 +18,13 @@ export class TestComponent implements OnInit {
   age: number;
   hobby: string;
   hobbies: Array<Hobby>;
-  msg: string;
+  msg: Message;
   input1: string;
   input2: string;
   input3: string;
 
-  constructor() {
-    this.msg = "you click me";
+  constructor(private movieService: MovieService) {
+    //this.msg = "you click me";
     this.name = "daniel";
     this.age = 33;
     
@@ -33,7 +39,11 @@ export class TestComponent implements OnInit {
   }
 
   showMsg() {
-    alert(this.msg);
+    this.movieService.test().subscribe(
+      msg=>alert(msg.Message)
+    
+      
+    );
   }
 
   keyupHandler1(event:any)

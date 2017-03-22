@@ -1,8 +1,9 @@
 export class Movie {
-    id: String;
+    _id: String;
     title: String;
     releaseYear: String;
     director: String;
     genre: String;
-    play: Number
+    play: Number;
 }
+

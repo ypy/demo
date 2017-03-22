@@ -1,0 +1,10 @@
+<h3>Heroes:</h3>
+<ul>
+  <li class="movie-item" *ngFor="let movie of movies">
+    <em class="movie-desc">{{movie.title+"  "+movie._id}}</em>
+    <span class="movie-operator">
+      <i  (click)="detail(movie)" class="fa fa-edit">详情</i>
+      <i class="fa fa-edit">编辑</i>
+      </span>
+  </li>
+</ul>
