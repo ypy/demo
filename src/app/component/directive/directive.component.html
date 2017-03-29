@@ -1,0 +1,18 @@
+<p>
+  属性指令
+</p>
+<div [style.color]="isRed ? 'red' : 'blue'" >我的颜色会变</div>
+<button class="btn btn-primary" (click)="changeColor()">Add</button>
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div>
+<p>
+ 自定义指令
+</p>
+<p> <span myUnderline>Hover to underline</span> </p>
+
+<p>
+  @output @input
+</p>
+<p> <span myUnderline>child says {{fruit+" "+feedback}} </span> </p>
+<app-child (feedback)="reiceiveFeedback($event)" [fruit]="fruit"></app-child>

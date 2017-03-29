@@ -1,3 +1,21 @@
-<p>
-  movie-edit works!
-</p>
+<h3>Add Movie</h3>
+<form (ngSubmit)="submit()" #form="ngForm" class="form-horizontal" role="form">
+  <div class="col-sm-9">
+    <input type="text" [(ngModel)]="movie.title" id="title" name="title" class="form-control" placeholder="电影名称">
+  </div>
+  <div class="col-sm-9">
+    <input type="text" [(ngModel)]="movie.releaseYear" id="releaseYear" name="releaseYear" class="form-control" placeholder="发布年份">
+  </div>
+ <div class="col-sm-9">
+    <input type="text" [(ngModel)]="movie.director" id="director" name="director" class="form-control" placeholder="导演">
+  </div>
+  <div class="col-sm-9">
+    <input type="text" [(ngModel)]="movie.genre" id="genre" name="genre" class="form-control" placeholder="类型">
+  </div>
+  <div class="col-sm-9">
+    <input type="text" [(ngModel)]="movie.play" id="play" name="play" class="form-control" placeholder="播放次数">
+  </div>
+  
+ 
+  <button type="submit" class="btn btn-success" [disabled]="!form.form.valid">Submit</button>
+</form>

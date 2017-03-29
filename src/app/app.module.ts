@@ -10,6 +10,11 @@ import { TestComponent } from './component/test/test.component';
 import { MovieListComponent } from './component/movie-list/movie-list.component';
 import { MovieDetailComponent } from './component/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './component/movie-edit/movie-edit.component';
+import { PipesComponent } from './component/pipes/pipes.component';
+import { MyPipesPipe } from './pipes/my-pipes.pipe';
+import { DirectiveComponent } from './component/directive/directive.component';
+import { MyDirectiveDirective } from './directive/my-directive.directive';
+import { ChildComponent } from './component/child/child.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { MovieEditComponent } from './component/movie-edit/movie-edit.component'
     TestComponent,
     MovieListComponent,
     MovieDetailComponent,
-    MovieEditComponent
+    MovieEditComponent,
+    PipesComponent,
+    MyPipesPipe,
+    DirectiveComponent,
+    MyDirectiveDirective,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +41,8 @@ import { MovieEditComponent } from './component/movie-edit/movie-edit.component'
       ,{ path: 'movies', component: MovieListComponent }
       ,{path:"detail/:id",component:MovieDetailComponent}
       ,{path:"edit/:id",component:MovieEditComponent}
+      ,{path:"pipes",component:PipesComponent}
+      ,{path:"directive",component:DirectiveComponent}
     ])
     
   ],

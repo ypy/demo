@@ -14,14 +14,11 @@
 <p>点击事件</p>
 <button (click)="showMsg()">show msg</button>
 <p>keyup事件,传递原生的event对象</p>
-<input (keyup)="keyupHandler1($event)"  type="text">
-您输入的值为: {{input1}}
+<input (keyup)="keyupHandler1($event)" type="text"> 您输入的值为: {{input1}}
 <p>keyup事件,传递原生的event对象,强类型</p>
-<input (keyup)="keyupHandler2($event)"  type="text">
-您输入的值为: {{input2}}
+<input (keyup)="keyupHandler2($event)" type="text"> 您输入的值为: {{input2}}
 <p>模板引用变量</p>
-<input #name3 (keyup.enter)="keyupHandler3(name3.value)"  type="text">
-您输入的值为: {{input3}}
+<input #name3 (keyup.enter)="keyupHandler3(name3.value)" type="text"> 您输入的值为: {{input3}}
 
 <p>
   <ngb-alert [dismissible]="ture">
@@ -29,5 +26,5 @@
   </ngb-alert>
 </p>
 <ul class="the-icons">
-<span><i class="fa fa-search"></i> icon-search</span>
+  <span><i class="fa fa-search"></i> icon-search</span>
 </ul>
